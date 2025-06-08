@@ -1,0 +1,155 @@
+.start-screen {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #a8e6cf 0%, #88d8a3 100%);
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.orchard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.tree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  opacity: 0.3;
+  animation: sway 3s ease-in-out infinite;
+}
+
+.tree-1 { animation-delay: 0s; }
+.tree-2 { animation-delay: 0.5s; }
+.tree-3 { animation-delay: 1s; }
+.tree-4 { animation-delay: 1.5s; }
+.tree-5 { animation-delay: 2s; }
+.tree-6 { animation-delay: 2.5s; }
+
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  max-width: 90%;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d5016;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  margin: 20px 0;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+  margin: 30px 0;
+}
+
+.main-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #e17055;
+  margin-bottom: 15px;
+}
+
+.sub-text {
+  font-size: 1rem;
+  color: #636e72;
+  margin-bottom: 8px;
+}
+
+.start-button {
+  background: linear-gradient(45deg, #00b894, #00cec9);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 15px 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 184, 148, 0.3);
+  margin-top: 20px;
+}
+
+.start-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 184, 148, 0.4);
+}
+
+.start-button:active {
+  transform: translateY(-1px);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .content {
+    padding: 30px 20px;
+    max-width: 95%;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  
+  .main-text {
+    font-size: 1.1rem;
+  }
+  
+  .sub-text {
+    font-size: 0.9rem;
+  }
+  
+  .start-button {
+    font-size: 1.1rem;
+    padding: 12px 35px;
+  }
+  
+  .tree {
+    font-size: 2rem;
+  }
+} 

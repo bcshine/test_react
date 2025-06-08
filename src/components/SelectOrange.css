@@ -1,0 +1,172 @@
+.select-orange {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  padding: 20px;
+}
+
+.tree-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.orange-tree {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tree-trunk {
+  font-size: 8rem;
+  margin-bottom: -50px;
+  z-index: 1;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+}
+
+.oranges-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  z-index: 2;
+}
+
+.orange {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+.orange:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.orange.shake {
+  animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0) scale(1.1); }
+  25% { transform: translateX(-3px) scale(1.1); }
+  75% { transform: translateX(3px) scale(1.1); }
+}
+
+/* 귤 위치 배치 (원형으로) */
+.orange-1 {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.orange-2 {
+  top: 30%;
+  right: 10px;
+}
+
+.orange-3 {
+  bottom: 30%;
+  right: 10px;
+}
+
+.orange-4 {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.orange-5 {
+  bottom: 30%;
+  left: 10px;
+}
+
+.orange-6 {
+  top: 30%;
+  left: 10px;
+}
+
+.instruction {
+  text-align: center;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 40px;
+  border-radius: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.instruction h2 {
+  font-size: 1.5rem;
+  color: #d63031;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .tree-trunk {
+    font-size: 6rem;
+    margin-bottom: -40px;
+  }
+  
+  .oranges-container {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .orange {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+  
+  .instruction h2 {
+    font-size: 1.3rem;
+  }
+  
+  .instruction {
+    padding: 15px 30px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tree-trunk {
+    font-size: 5rem;
+    margin-bottom: -30px;
+  }
+  
+  .oranges-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .orange {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  
+  .instruction h2 {
+    font-size: 1.2rem;
+  }
+} 
